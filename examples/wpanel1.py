@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-comparevalww3board.py
+wpanel1.py
 
 VERSION AND LAST UPDATE:
  v1.0  04/04/2022
@@ -41,6 +41,7 @@ matplotlib.use('Agg')  # uncomment this for backend plots, not for rendering in 
 import xarray as xr
 import numpy as np
 from pylab import *
+from matplotlib.mlab import *
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import sys
@@ -66,9 +67,9 @@ slat=np.array([5,65]); slon=np.array([-90,-20])
 # variable for the field plots
 wvar="hs"
 # Paths
-wrun1="/home/ricardo/cimas/analysis/3assessments/evalGSE/data/stream10/c00"; trun1="PR3.UQ.WDTH1.5" # Title of run
-wrun2="/home/ricardo/cimas/analysis/3assessments/evalGSE/data/stream21/c00"; trun2="PR3.UQ.WDTH1.5_48D"
-pbuoys="/home/ricardo/cimas/analysis/3assessments/evalGSE/data/buoys"
+wrun1="/data/ww3/c00"; trun1="PR3.UQ.WDTH1.5" # Title of run
+wrun2="/data/ww3/c00"; trun2="PR3.UQ.WDTH1.5_48D"
+pbuoys="/data/buoys"
 
 # READ DATA ********************
 dt = np.arange(datetime(2016,10,4), datetime(2016,11,3), timedelta(days=1)).astype(datetime) # initial/final date of hindcast (each file with 1 day)
